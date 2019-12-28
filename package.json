@@ -4,7 +4,10 @@
   "description": "Learn testCafe automation",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules\\.bin\\testcafe chrome ./tests"
+    "test:chrome": "node_modules\\.bin\\testcafe chrome ./tests",
+    "test:chrome:headless": "node_modules\\.bin\\testcafe chrome:headless ./tests",
+    "test:chrome:mobile": "node_modules\\.bin\\testcafe chrome:emulation:device=iphone X ./tests",
+    "test:ie": "node_modules\\.bin\\testcafe ie ./tests"
   },
   "repository": {
     "type": "git",

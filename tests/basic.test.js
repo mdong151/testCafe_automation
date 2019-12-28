@@ -8,4 +8,6 @@ fixture`Test suite No. 1`
 test('Test case No. 1', async t => {
     await t.typeText('#developer-name', 'Dong Nguyen')
     await t.click('#submit-button')
+
+    await t.expect(Selector('#article-header').innerText).contains('Nguyen')
 })
