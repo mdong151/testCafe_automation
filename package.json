@@ -1,0 +1,22 @@
+{
+  "name": "testcafe_automation",
+  "version": "1.0.0",
+  "description": "Learn testCafe automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdong151/testCafe_automation.git"
+  },
+  "author": "Dong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdong151/testCafe_automation/issues"
+  },
+  "homepage": "https://github.com/mdong151/testCafe_automation#readme",
+  "devDependencies": {
+    "testcafe": "^1.7.1"
+  }
+}
