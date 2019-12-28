@@ -26,3 +26,10 @@ test('Test case No. 1', async t => {
 
     await t.expect(Selector('#article-header').innerText).contains('Nguyen')
 })
+
+test('Test case No. 2', async t => {
+    await t.typeText('#developer-name', 'Dong Nguyen')
+    await t.click('#submit-button')
+    // await t.wait(2000)
+    await t.expect(Selector('#article-header').innerText).contains('Nguyen')
+})
