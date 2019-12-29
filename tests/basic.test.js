@@ -33,10 +33,8 @@ test('Test case No. 2', async t => {
     const submit_button = Selector('#submit-button')
     const articleText = Selector('#article-header').innerText
 
-    await t.takeScreenshot({ path: "./tests/test.png", fullPage: true })
-    await t.takeElementScreenshot(submit_button)
     await t.typeText(name_input, 'Dong Nguyen')
     await t.click(submit_button)
     // await t.wait(2000)
-    await t.expect(articleText).contains('Nguyen')
+    await t.expect(articleText).contains('John')
 })
