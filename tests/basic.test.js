@@ -9,7 +9,7 @@ fixture`Test suite No. 1`
     })
     .beforeEach(async t => {
         // run before each test
-        await t.setTestSpeed(0.5)
+        await t.setTestSpeed(1)
     })
     .after(async t => {
         // Cleaning test data
@@ -29,8 +29,14 @@ test('Test case No. 1', async t => {
 })
 
 test('Test case No. 2', async t => {
-    await t.typeText('#developer-name', 'Dong Nguyen')
-    await t.click('#submit-button')
+    const name_input = Selector('#developer-name')
+    const submit_button = Selector('#submit-button')
+    const articleText = Selector('#article-header').innerText
+
+    await t.takeScreenshot({ path: "./tests/test.png", fullPage: true })
+    await t.takeElementScreenshot(submit_button)
+    await t.typeText(name_input, 'Dong Nguyen')
+    await t.click(submit_button)
     // await t.wait(2000)
-    await t.expect(Selector('#article-header').innerText).contains('Nguyen')
+    await t.expect(articleText).contains('Nguyen')
 })
