@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:chrome": "node_modules\\.bin\\testcafe chrome ./tests -s takeOnFails=true",
-    "test:chrome:headless": "node_modules\\.bin\\testcafe chrome:headless ./tests",
-    "test:chrome:mobile": "node_modules\\.bin\\testcafe chrome:emulation:device=iphone X ./tests",
-    "test:ie": "node_modules\\.bin\\testcafe ie ./tests"
+    "test:chrome:headless": "node_modules\\.bin\\testcafe chrome:headless ./tests -s takeOnFails=true",
+    "test:chrome:mobile": "node_modules\\.bin\\testcafe chrome:emulation:device=iphone X ./tests -s takeOnFails=true",
+    "test:ie": "node_modules\\.bin\\testcafe ie ./tests -s takeOnFails=true"
   },
   "repository": {
     "type": "git",
