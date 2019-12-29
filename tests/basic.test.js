@@ -37,5 +37,27 @@ test('Test case No. 2', async t => {
     await t.typeText(name_input, 'Dong Nguyen')
     await t.click(submit_button)
     // await t.wait(2000)
+    await t.expect(articleText).contains('Dong')
+})
+
+test.skip('Test case No. 3', async t => {
+    const name_input = Selector('#developer-name')
+    const submit_button = Selector('#submit-button')
+    const articleText = Selector('#article-header').innerText
+
+    await t.typeText(name_input, 'Dong Nguyen')
+    await t.click(submit_button)
+    // await t.wait(2000)
+    await t.expect(articleText).contains('John')
+})
+
+test.only('Test case No. 4', async t => {
+    const name_input = Selector('#developer-name')
+    const submit_button = Selector('#submit-button')
+    const articleText = Selector('#article-header').innerText
+
+    await t.typeText(name_input, 'Dong Nguyen')
+    await t.click(submit_button)
+    // await t.wait(2000)
     await t.expect(articleText).contains('John')
 })
