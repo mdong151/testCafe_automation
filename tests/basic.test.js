@@ -10,6 +10,7 @@ fixture`Test suite No. 1`
     .beforeEach(async t => {
         // run before each test
         await t.setTestSpeed(1)
+        await t.setPageLoadTimeout(5000)
     })
     .after(async t => {
         // Cleaning test data
