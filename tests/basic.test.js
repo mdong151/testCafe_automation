@@ -51,7 +51,7 @@ test.skip('Test case No. 3', async t => {
     await t.expect(articleText).contains('John')
 })
 
-test.only('Test case No. 4', async t => {
+test.skip('Test case No. 4', async t => {
     const name_input = Selector('#developer-name')
     const submit_button = Selector('#submit-button')
     const articleText = Selector('#article-header').innerText
